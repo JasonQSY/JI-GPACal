@@ -19,12 +19,13 @@ points = []
 # read xlsx file
 data = xlrd.open_workbook('grade.xlsx')
 table = data.sheets()[0]
-nrows = table.nrows
-for i in range(1,nrows):
+for i in range(1,table.nrows):
     line = table.row_values(i)
+    if line == ['','','']:
+        break
+
     credits.append(line[1])
     letters.append(line[2])
-
 
 # convert letters to points
 for letter in letters:
