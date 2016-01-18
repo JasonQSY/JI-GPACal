@@ -1,3 +1,5 @@
+import xlrd
+
 #Initialization
 credits = []
 credits_flo = []
@@ -5,14 +7,24 @@ letters = []
 points = []
 
 #read txt file
-f = open('data.txt','r')
-lines = f.readlines()
-for line in lines:
-    words = line.split()
-    credits.append(words[1])
-    letters.append(words[2])
+#f = open('data.txt','r')
+#lines = f.readlines()
+#for line in lines:
+#    words = line.split()
+#    credits.append(words[1])
+#    letters.append(words[2])
 
-f.close()
+#f.close()
+
+# read xlsx file
+data = xlrd.open_workbook('grade.xlsx')
+table = data.sheets()[0]
+nrows = table.nrows
+for i in range(1,nrows):
+    line = table.row_values(i)
+    credits.append(line[1])
+    letters.append(line[2])
+
 
 # convert letters to points
 for letter in letters:
