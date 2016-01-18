@@ -32,8 +32,12 @@ for letter in letters:
     	points.append(2.3)
     elif letter == 'C':
     	points.append(2.0)
-    else: #D
-    	points.append(1.0)
+    elif letter == 'C-':
+        points.append(1.7)
+    elif letter == 'D':
+        points.append(1.0)
+    else: #F
+    	points.append(0.0)
 
 # convert credits to credits_flo
 for credit in credits:
