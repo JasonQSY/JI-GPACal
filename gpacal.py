@@ -1,4 +1,4 @@
-import xlrd
+import xlrd as xls
 
 #Initialization
 credits = []
@@ -17,12 +17,12 @@ points = []
 #f.close()
 
 # read xlsx file
-data = xlrd.open_workbook('grade.xlsx')
+data = xls.open_workbook('grade.xlsx')
 table = data.sheets()[0]
 for i in range(1,table.nrows):
     line = table.row_values(i)
     if line == ['','','']:
-        break
+        continue
 
     credits.append(line[1])
     letters.append(line[2])
@@ -64,4 +64,4 @@ for i in range(len(credits)):
 gpa = gpa / sum(credits_flo)
 
 #output
-print('The GPA is ' + '%.3g'%gpa)
+print('The GPA is ' + '%.5f'%gpa)
