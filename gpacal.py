@@ -23,7 +23,8 @@ for i in range(1,table.nrows):
     line = table.row_values(i)
     if line == ['','','']:
         continue
-
+    if line[2] == '':
+        continue
     credits.append(line[1])
     letters.append(line[2])
 
