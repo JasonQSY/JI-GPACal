@@ -16,3 +16,19 @@ Since `grade.xlsx` is in `.gitignore`, it won't be pushed or pulled. After typin
 ````bash
 python3 gpacal.py # python2 may be OK, but I use python3 
 ````
+
+## Dependencies
+
+The only package is `xlrd`. You can install it by `pip3`.
+
+````bash
+pip3 install xlrd
+````
+
+## Improvements and Contribution
+
+- Neglect the line if letter grade is empty (it is useful because I can type the course just after taking it).
+- Support `csv` file.
+- Can be used without python environment (actually only use `py2exe` is okay).
+
+
