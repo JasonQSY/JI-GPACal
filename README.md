@@ -27,8 +27,10 @@ pip3 install xlrd
 
 ## Improvements and Contribution
 
-- Neglect the line if letter grade is empty (it is useful because I can type the course just after taking it).
-- Support `csv` file.
-- Can be used without python environment (actually only use `py2exe` is okay).
+There are several points open to pull request. Other improvements are also welcomed.
+
+- [X] Neglect the line if letter grade is empty (it is useful because I can type the course just after taking it). Completed by [@CZY](https://github.com/IFICL).
+- [ ] Support `csv` file.
+- [ ] Can be used without python environment (actually only use `py2exe` is okay).
 
 
