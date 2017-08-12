@@ -1,4 +1,6 @@
-# JI-GPACal
+# JI-GPACal (Deprecated)
+
+> This is my first project when I learn python. It's time to say goodbye.
 
 This is the gpa calculator for um-sjtu ji. I use it to calculate my own GPA.
 
